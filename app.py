@@ -36,7 +36,7 @@ if uploaded_file is not None:
         u.loc[u['status'] == 'Not Opted', 'per'] = not_opt_count / total_count
 
         fig = px.pie(u, values='count', names='client', color='status', title=column_name, hole=.6,
-                     color_discrete_sequence=["red", "yellow"])
+                     color_discrete_sequence=["cyan", "yellow"])
         fig.update_traces(textposition='outside', textinfo='label')
         figures.append(fig)
         return figures
